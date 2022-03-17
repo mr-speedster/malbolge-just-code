@@ -1,0 +1,45 @@
+MovD
+1	=	p	Opr
+2	B	o	Nop
+3	A	o	Nop
+4	#	*	Rot
+5	9	p	Opr
+6	"	j	MovD
+7	=	o	Nop
+8	<	o	Nop
+9	;	o	Nop
+10	:	o	Nop
+11	3	p	Opr
+12	y	*	Rot
+13	7	o	Nop
+14	x	j	MovD
+15	5	o	Nop
+16	4	o	Nop
+17	-	p	Opr
+18	2	o	Nop
+19	1	o	Nop
+20	q	*	Rot
+21	/	o	Nop
+22	p	j	MovD
+23	-	o	Nop
+24	,	o	Nop
+25	+	o	Nop
+26	*	o	Nop
+27	)	o	Nop
+28	"	p	Opr
+29	!	p	Opr
+30	h	j	MovD
+31	%	o	Nop
+32	B	i	Jmp
+37	P	/	In/Nop/Out/Nop/Nop/Nop/Nop/Nop/Nop
+38	<	i	Jmp
+39	<	<	60 (R_MOVD)
+40	:	i	0t0000002011, will be 0t0000001100 after the 12th step
+41	(	v	0t0000001111; will be 0t1111111101 after the 29th step
+42	8	i	0t0000002002, will be 0t0000002012 after the 30th step
+43	&	v	38 (loop)
+44	6	i	0t000002000; will be 0t0000000020 after the 21th step
+45	6	<	0t000002000; will be 0t1111112011 after the 6th step
+46	#	v	35 (destination for D register)
+60	J	j	MovD/Nop
+61	%	i	Jmp
